@@ -6,7 +6,7 @@ import playIcon from "../../../assets/playIconGreen.svg";
 
 const TaxSolutions = () => {
   return (
-    <Box className="grid gap-4 grid-cols-12 items-center custom-container px-4">
+    <Box className="grid gap-4 grid-cols-12 items-center custom-container p-4">
       {/* Left Text Section */}
       <Box className="col-span-12 lg-900:col-span-7 flex items-center lg-900:items-start justify-between h-full flex-col py-4 xl:py-0 gap-4 text-center lg-900:text-start">
         <Typography className="!font-bold !text-5xl lg:!text-6xl xl:!text-7xl xl:!leading-[82px] !text-primary">

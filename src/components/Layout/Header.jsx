@@ -80,7 +80,15 @@ const Header = () => {
   const isSubMenuActive = servicesSubMenu.some((label) => isActive(label));
 
   return (
-    <div className="sticky top-0 bg-white z-50 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)]">
+    <Box
+      sx={{
+        position: "sticky",
+        top: 0,
+        zIndex: 1000,
+        background: "transparent",
+        backdropFilter: "blur(100px)",
+      }}
+    >
       <div className="flex lg:justify-between items-center lg:gap-6 sm:gap-4 gap-2 custom-container p-4">
         <img
           src={TaxIntelliLogo}
@@ -311,7 +319,7 @@ const Header = () => {
           </Box>
         </Menu>
       </div>
-    </div>
+    </Box>
   );
 };
 
