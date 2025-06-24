@@ -8,6 +8,7 @@ const LandingPageTitleSection = ({
   subText,
   children,
   sliderUi,
+  needMB = true,
 }) => {
   return (
     <Box
@@ -17,7 +18,7 @@ const LandingPageTitleSection = ({
       flexDirection="column"
       alignItems={sliderUi ? "start" : "center"}
       gap={2}
-      mb={7}
+      mb={needMB ? 7 : 0}
     >
       <Box
         // variant="contained"
@@ -58,5 +59,6 @@ LandingPageTitleSection.propTypes = {
   subText: PropTypes.string,
   children: PropTypes.any,
   sliderUi: PropTypes.bool,
+  needMB: PropTypes.bool,
 };
 export default LandingPageTitleSection;

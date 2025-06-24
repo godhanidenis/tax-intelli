@@ -6,7 +6,7 @@ const RightIconCommonButton = ({ title, onClick }) => {
   return (
     <Button
       sx={{ textTransform: "none" }}
-      className="!text-white !bg-primary flex justify-start items-center gap-3 !rounded-full !px-4 !py-3"
+      className="!text-white !bg-primary flex justify-start items-center gap-3 !rounded-full !px-3 md:!px-4 !py-2 md:!py-3"
       onClick={onClick}
     >
       <span className="text-white">{title}</span>

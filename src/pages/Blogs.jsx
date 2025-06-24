@@ -75,7 +75,7 @@ const Blogs = () => {
 
   return (
     <HeaderSection>
-      <Box mb={7} className="custom-container px-4">
+      <Box className="custom-container px-4">
         <Box className="flex flex-col gap-3 items-center justify-center mb-10 sm:mb-20">
           <Typography className="!font-bold !text-5xl lg:!text-6xl xl:!text-7xl xl:!leading-[82px] !text-primary">
             News & Media

@@ -35,6 +35,7 @@ const Blogs = () => {
       buttonText="BLOGS"
       text="Guides, Tips & Resources"
       subText="Practical insights and expert advice to help you make smarter business decisions"
+      needMB={false}
     >
       <>
         <Box className="grid grid-cols-1 sm-500:grid-cols-2 gap-4 md:gap-6 mt-8">
