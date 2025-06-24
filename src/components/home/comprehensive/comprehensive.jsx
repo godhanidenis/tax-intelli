@@ -60,7 +60,7 @@ const Comprehensive = () => {
         <Box className="grid grid-cols-1 lg-900:grid-cols-2 gap-6 py-4">
           <Box className="flex flex-col justify-center gap-6">
             {/* List Items */}
-            <div className="flex flex-col gap-y-4 items-center lg-900:items-start mx-auto lg-900:mx-0">
+            <div className="flex flex-col gap-y-4 items-start lg-900:items-start mx-auto lg-900:mx-0">
               {list.map((item, index) => (
                 <div key={index} className="flex items-start gap-x-3">
                   <TaskAltIcon className="text-primary" size={20} />

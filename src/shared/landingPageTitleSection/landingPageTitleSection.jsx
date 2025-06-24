@@ -41,7 +41,7 @@ const LandingPageTitleSection = ({
           gap={3}
           textAlign="center"
         >
-          <Typography className="!text-primary !font-bold !text-5xl">
+          <Typography className="!text-primary !font-bold !text-4xl sm-500:!text-5xl">
             {text}
           </Typography>
           <Typography className="!text-lg px-[18px]">{subText}</Typography>

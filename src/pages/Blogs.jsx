@@ -31,6 +31,40 @@ const BlogsData = [
     date: "19 Jan 2025",
     categoryColor: "bg-[#3683F6]",
   },
+  {
+    image: StartupsImage,
+    title: "The Ultimate Guide to Filing Taxes for Indian Startups",
+    subTitle:
+      "What every founder needs to know before the financial year ends.",
+    category: "Tax Filing",
+    date: "19 Jan 2025",
+    categoryColor: "bg-[#F65D36]",
+  },
+  {
+    image: SMEsImage,
+    title: "Compliance Checklist for SMEs in 2025",
+    subTitle: "A step-by-step guide to stay audit-ready and avoid penalties.",
+    category: "Compliance",
+    date: "19 Jan 2025",
+    categoryColor: "bg-[#3683F6]",
+  },
+  {
+    image: StartupsImage,
+    title: "The Ultimate Guide to Filing Taxes for Indian Startups",
+    subTitle:
+      "What every founder needs to know before the financial year ends.",
+    category: "Tax Filing",
+    date: "19 Jan 2025",
+    categoryColor: "bg-[#F65D36]",
+  },
+  {
+    image: SMEsImage,
+    title: "Compliance Checklist for SMEs in 2025",
+    subTitle: "A step-by-step guide to stay audit-ready and avoid penalties.",
+    category: "Compliance",
+    date: "19 Jan 2025",
+    categoryColor: "bg-[#3683F6]",
+  },
 ];
 const Blogs = () => {
   const [category, setCategory] = useState("");
@@ -42,10 +76,7 @@ const Blogs = () => {
   return (
     <HeaderSection>
       <Box mb={7} className="custom-container px-4">
-        <Box
-          className="flex flex-col gap-3 items-center justify-center"
-          mb={10}
-        >
+        <Box className="flex flex-col gap-3 items-center justify-center mb-10 sm:mb-20">
           <Typography className="!font-bold !text-5xl lg:!text-6xl xl:!text-7xl xl:!leading-[82px] !text-primary">
             News & Media
           </Typography>
@@ -116,7 +147,7 @@ const Blogs = () => {
             </Box>
           </Box>
           <Box className="grid grid-cols-1 sm-500:grid-cols-2 gap-4 md:gap-6 mt-8">
-            {BlogsData.slice(0, 3).map(
+            {BlogsData.map(
               (
                 { image, title, subTitle, category, date, categoryColor },
                 index

@@ -65,13 +65,13 @@ const Testimonials = () => {
         >
           {TESTIMONIALS.map((item, idx) => (
             <Box key={idx} className="py-10 px-12 rounded-[20px] bg-[#F8F9FA]">
-              <Box className="text-center !text-2xl !leading-10 !font-semibold !text-primary !max-w-3xl !w-full !mx-auto !py-4 !mb-4 relative">
+              <Box className="text-center !text-lg sm:!text-2xl sm:!leading-10 !font-semibold !text-primary !max-w-3xl !w-full !mx-auto !py-4 !mb-4 relative">
                 {item.text}
                 <Typography className="!leading-none absolute left-[-20px] top-[10px] text-[#0A3D2A] !text-5xl !font-bold">
                   “
                 </Typography>
 
-                <Typography className="!leading-none absolute bottom-[-13px] right-[20px] text-[#0A3D2A] !text-5xl !font-bold">
+                <Typography className="!leading-none absolute bottom-[-22px] sm:bottom-[-13px] right-[-20px] text-[#0A3D2A] !text-5xl !font-bold">
                   ”
                 </Typography>
               </Box>
@@ -85,10 +85,10 @@ const Testimonials = () => {
                 <Avatar
                   src={item.avatar}
                   alt={item.name}
-                  className="!h-[60px] !w-[60px] "
+                  className="!h-[50px] sm:!h-[60px] !w-[50px] sm:!w-[60px]"
                 />
                 <Box textAlign="left">
-                  <Typography className="!text-xl !font-semibold">
+                  <Typography className="!text-base sm:!text-xl !font-semibold">
                     {item.name}
                   </Typography>
                   <Box display="flex" gap={1}>
