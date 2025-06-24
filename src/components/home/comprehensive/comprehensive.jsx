@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import LandingPageTitleSection from "../../../shared/landingPageTitleSection/landingPageTitleSection";
-import { Box, Tab, Tabs, Typography } from "@mui/material";
-import TaxSolutionsImage from "../../../assets/taxSolutions.png";
+import { Box, Tab, Tabs } from "@mui/material";
 import RightIconCommonButton from "../../../shared/CommonButton/RightIconCommonButton";
-import { CheckCircle } from "@mui/icons-material";
 import TaskAltIcon from "@mui/icons-material/TaskAlt";
+import ServicesImage from "../../../assets/services.png";
 const tabData = [
   { id: 1, label: "Income Tax Services" },
   { id: 2, label: "GST Compliance & Advisory" },
@@ -90,7 +89,7 @@ const Comprehensive = () => {
           </Box>
 
           <img
-            src={TaxSolutionsImage}
+            src={ServicesImage}
             alt="Smart Tax"
             className="w-[400px] h-[100%] lg-900:h-full lg-900:w-full mx-auto lg-900:mx-0"
           />
