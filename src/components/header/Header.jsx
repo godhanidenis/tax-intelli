@@ -15,11 +15,12 @@ import { useState } from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import PlayIconCommonButton from "../../shared/CommonButton/PlayIconCommonButton";
 import playIcon from "../../assets/playIconWhite.svg";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Header = () => {
   const theme = useTheme();
   const navigate = useNavigate();
+  const location = useLocation();
 
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -57,7 +58,7 @@ const Header = () => {
 
   const menuRoutes = {
     Home: "/",
-    Services: "/services", // optional
+    Services: "/services",
     Blogs: "/blogs",
     "Income Tax Services": "/services/income-tax",
     "GST Compliance & Advisory": "/services/gst-compliance",
@@ -70,6 +71,13 @@ const Header = () => {
     const path = menuRoutes[label];
     if (path) navigate(path);
   };
+
+  const isActive = (label) => {
+    const path = menuRoutes[label];
+    return location.pathname === path;
+  };
+
+  const isSubMenuActive = servicesSubMenu.some((label) => isActive(label));
 
   return (
     <div className="sticky top-0 bg-white z-50 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)]">
@@ -101,7 +109,11 @@ const Header = () => {
                   aria-expanded={servicesOpen ? "true" : undefined}
                   variant="body1"
                   component="span"
-                  className="cursor-pointer hover:!text-primary duration-300 !text-base !leading-5 select-none"
+                  className={`cursor-pointer duration-300 !text-base !leading-5 select-none ${
+                    isSubMenuActive || isActive(item)
+                      ? "!font-bold text-primary"
+                      : "text-secondary hover:!text-primary"
+                  }`}
                 >
                   {item}
                   <KeyboardArrowDownIcon
@@ -115,13 +127,18 @@ const Header = () => {
                 </Typography>
               );
             }
+
             return (
               <Typography
                 key={index}
                 onClick={() => handleNavigate(item)}
                 variant="body1"
                 component="span"
-                className="cursor-pointer hover:!text-primary duration-300 !text-base !leading-5 select-none"
+                className={`cursor-pointer duration-300 !text-base !leading-5 select-none ${
+                  isActive(item)
+                    ? "!font-bold text-primary"
+                    : "text-secondary hover:!text-primary"
+                }`}
               >
                 {item}
               </Typography>
@@ -155,14 +172,18 @@ const Header = () => {
                 handleServicesClose();
                 handleNavigate(subItem);
               }}
-              className="hover:!text-primary duration-300 !text-secondary"
+              className={`duration-300 ${
+                isActive(subItem)
+                  ? "!font-bold !text-primary"
+                  : "!text-secondary hover:!text-primary"
+              }`}
             >
               {subItem}
             </MenuItem>
           ))}
         </Menu>
 
-        {/* CTA - Only show on desktop */}
+        {/* CTA - Desktop */}
         <Box className="lg:ms-0 ms-auto hidden sm-500:flex">
           <PlayIconCommonButton
             title="Talk to an Expert"
@@ -220,7 +241,11 @@ const Header = () => {
                 <div key={index}>
                   <MenuItem
                     onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                    className="hover:!text-primary !text-secondary duration-300 flex justify-between items-center"
+                    className={`flex justify-between items-center duration-300 ${
+                      isSubMenuActive || isActive(item)
+                        ? "!font-bold !text-primary"
+                        : "!text-secondary hover:!text-primary"
+                    }`}
                   >
                     {item}
                     <KeyboardArrowDownIcon
@@ -240,7 +265,11 @@ const Header = () => {
                           handleMenuClose();
                           handleNavigate(subItem);
                         }}
-                        className="!ps-6 hover:!text-primary !text-secondary duration-300 text-sm"
+                        className={`!ps-6 text-sm duration-300 ${
+                          isActive(subItem)
+                            ? "!font-bold !text-primary"
+                            : "!text-secondary hover:!text-primary"
+                        }`}
                       >
                         {subItem}
                       </MenuItem>
@@ -256,13 +285,19 @@ const Header = () => {
                   handleMenuClose();
                   handleNavigate(item);
                 }}
-                className="hover:!text-primary !text-secondary duration-300"
+                className={`duration-300 ${
+                  isActive(item)
+                    ? "!font-bold !text-primary"
+                    : "!text-secondary hover:!text-primary"
+                }`}
               >
                 {item}
               </MenuItem>
             );
           })}
+
           <Divider className="!m-0 sm-500:hidden" />
+
           {/* Mobile CTA Button */}
           <Box className="px-4 pt-2 pb-1 sm-500:hidden">
             <PlayIconCommonButton
@@ -271,7 +306,6 @@ const Header = () => {
               className="text-white !bg-primary hover:!bg-secondary duration-300 !py-2 !px-4 !rounded-full w-full"
               onClick={() => {
                 handleMenuClose();
-                // navigate("/contact");
               }}
             />
           </Box>
