@@ -1,42 +1,62 @@
-import { Box, Typography } from "@mui/material";
-import PlayIconCommonButton from "../shared/CommonButton/PlayIconCommonButton";
-import playIcon from "../assets/playIconGreen.svg";
+import IntroSection from "../shared/ServiceSection/IntroSection";
+import incomeTextLeftImage from "../assets/incomeTexpage/income_text_intro.png";
+import ServiceDetail from "../shared/ServiceSection/ServiceDetail";
+import BackgroundImageWrapper from "../components/Layout/BackgroundImageWrapper";
+
+const introDetail = {
+  smallTitle: "Accurate. On time. Hassle-free",
+  bigTitle: "Income Tax Services",
+  description: `We help you file your Income Tax Returns with ease. Whether you are salaried, self-employed, or running a business, we make tax filing simple and stress-free.`,
+};
+
+const serviceDetail = {
+  leftImage: incomeTextLeftImage,
+  mainTitle: (
+    <>
+      Our Income Tax <br className="hidden sm:inline" /> services are ideal for
+    </>
+  ),
+  userTypes: [
+    {
+      icon: "https://img.icons8.com/emoji/48/briefcase-emoji.png",
+      alt: "Salaried",
+      title: "Salaried & Professionals",
+      description: "Teams worldwide rely on our platform",
+    },
+    {
+      icon: "https://img.icons8.com/color/48/shop.png",
+      alt: "Business Owners",
+      title: "Business Owners & Firms",
+      description: "Includes proprietors, firms, and startups",
+    },
+    {
+      icon: "https://img.icons8.com/color/48/family.png",
+      alt: "HUFs",
+      title: "HUFs & Companies",
+      description: "Hindu Undivided Families and registered companies",
+    },
+    {
+      icon: "https://img.icons8.com/emoji/48/globe-showing-americas-emoji.png",
+      alt: "NRIs",
+      title: "NRIs & Investors",
+      description: "Non-residents and capital market investors",
+    },
+  ],
+};
 
 const IncomeTax = () => {
   return (
-    <Box mb={7} className="custom-container px-4">
-      <Box className="flex flex-col gap-6 items-center justify-center" mb={10}>
-        <Typography className="!font-bold !text-[22px] !text-primary text-center">
-          Accurate. On time. Hassle-free
-        </Typography>
-
-        <Typography className="!font-bold !text-5xl lg:!text-6xl xl:!text-7xl xl:!leading-[82px] !text-primary text-center">
-          Income Tax Services
-        </Typography>
-
-        <Typography className="!text-lg !leading-8 max-w-[1080px] w-full text-center">
-          We help you file your Income Tax Returns with ease. Whether you are
-          salaried, self-employed, or running a business, we make tax filing
-          simple and stress-free.
-        </Typography>
-
-        <div className="flex gap-4 sm:gap-12 flex-col sm:flex-row">
-          <PlayIconCommonButton
-            title="Talk to an Expert"
-            icon={playIcon}
-            buttonVariant="outlined"
-            textClass="text-primary text-base lg:text-lg font-medium"
-            className="bg-white !text-primary !px-3 lg:!px-4 xl:!px-5 !py-2 lg:!py-3 xl:!py-4 !rounded-full !border-primary"
-          />
-
-          <PlayIconCommonButton
-            title="Explore Our Services"
-            textClass="text-primary text-base lg:text-lg font-medium text-white"
-            className="!bg-primary hover:!bg-secondary duration-300 !py-2 lg:!py-2.5 !px-4 !rounded-full text-lg"
-          />
+    <>
+      <BackgroundImageWrapper>
+        <div className="py-12 px-4 sm:px-6 lg:px-12">
+          <IntroSection {...introDetail} />
         </div>
-      </Box>
-    </Box>
+      </BackgroundImageWrapper>
+
+      <div className="py-12 px-4 sm:px-6 lg:px-12">
+        <ServiceDetail {...serviceDetail} />
+      </div>
+    </>
   );
 };
 

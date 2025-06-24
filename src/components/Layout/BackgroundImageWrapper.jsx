@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import { Box } from "@mui/material";
-
 import headerBackgroundImage from "../../assets/HeaderBg.png";
 import heroSectionBackgroundImage from "../../assets/Background.png";
 
