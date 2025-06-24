@@ -18,7 +18,7 @@ const PlayIconCommonButton = ({
       className={className}
       variant={buttonVariant}
     >
-      <img className={textClass} src={icon} alt="playIcon" />
+      {icon && <img className={textClass} src={icon} alt="playIcon" />}
       <span className={`ml-1 ${textClass}`}>{title}</span>
     </Button>
   );
