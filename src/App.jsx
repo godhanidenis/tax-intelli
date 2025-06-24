@@ -7,20 +7,38 @@ import GstCompliance from "./pages/GstCompliance";
 import RocMca from "./pages/RocMca";
 import Accounting from "./pages/Accounting";
 import Registrations from "./pages/Registrations";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 
+const theme = createTheme({
+  typography: {
+    fontFamily: "Inter, sans-serif",
+  },
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          fontFamily: "Inter, sans-serif",
+        },
+      },
+    },
+  },
+});
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/blogs" element={<Blogs />} />
-        <Route path="/services/income-tax" element={<IncomeTax />} />
-        <Route path="/services/gst-compliance" element={<GstCompliance />} />
-        <Route path="/services/roc-mca" element={<RocMca />} />
-        <Route path="/services/accounting" element={<Accounting />} />
-        <Route path="/services/registrations" element={<Registrations />} />
-      </Routes>
-    </BrowserRouter>
+    <ThemeProvider theme={theme}>
+      {" "}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/services/income-tax" element={<IncomeTax />} />
+          <Route path="/services/gst-compliance" element={<GstCompliance />} />
+          <Route path="/services/roc-mca" element={<RocMca />} />
+          <Route path="/services/accounting" element={<Accounting />} />
+          <Route path="/services/registrations" element={<Registrations />} />
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 
