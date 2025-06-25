@@ -30,7 +30,7 @@ const BackgroundImageWrapper = ({
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
+        backgroundPosition: forServiceBanner ? "start" : "center",
         width: "100%",
         height: "100%",
       }}

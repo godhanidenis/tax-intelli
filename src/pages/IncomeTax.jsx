@@ -18,6 +18,7 @@ import { Box, Typography } from "@mui/material";
 import TaskAltIcon from "@mui/icons-material/TaskAlt";
 import AIIcon from "../assets/AIIcon.png";
 import ServiceBannerSection from "../shared/ServiceSection/ServiceBannerSection";
+import RightIconCommonButton from "../shared/CommonButton/RightIconCommonButton";
 
 const introDetail = {
   smallTitle: "Accurate. On time. Hassle-free",
@@ -235,8 +236,14 @@ const IncomeTax = () => {
         </div>
       </LandingPageTitleSection>
       <ServiceBannerSection>
-        <div className="flex items-center justify-center w-full h-full">
-          <p className="text-white">Hello Banner</p>
+        <div className="flex items-center justify-center flex-col w-full h-full gap-4 sm:gap-8">
+          <Typography className="!font-bold !text-2xl sm:!text-3xl lg:!text-4xl !text-white text-center !mx-20 sm:!mx-24">
+            Let’s File It Right This Time
+          </Typography>
+          <Typography className="!text-base sm:!text-lg !text-white !text-center !mx-20 sm:!mx-24">
+            Avoid penalties. Save money. Stay stress-free
+          </Typography>
+          <RightIconCommonButton title="File my ITR now" />
         </div>
       </ServiceBannerSection>
     </>

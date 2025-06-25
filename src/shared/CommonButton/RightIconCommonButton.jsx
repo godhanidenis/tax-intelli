@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { Button } from "@mui/material";
 import EastIcon from "@mui/icons-material/East";
 
-const RightIconCommonButton = ({ title, onClick }) => {
+const RightIconCommonButton = ({ title, onClick = () => {} }) => {
   return (
     <Button
       sx={{ textTransform: "none" }}

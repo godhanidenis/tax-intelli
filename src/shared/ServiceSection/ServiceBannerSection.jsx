@@ -3,7 +3,7 @@ import BackgroundImageWrapper from "../../components/Layout/BackgroundImageWrapp
 
 const ServiceBannerSection = ({ children }) => {
   return (
-    <div className="custom-container h-[450px]">
+    <div className="custom-container h-[450px] px-4 sm:px-0">
       <BackgroundImageWrapper forServiceBanner={true}>
         {children}
       </BackgroundImageWrapper>
