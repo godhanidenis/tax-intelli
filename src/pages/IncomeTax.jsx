@@ -17,6 +17,7 @@ import LandingPageTitleSection from "../shared/landingPageTitleSection/landingPa
 import { Box, Typography } from "@mui/material";
 import TaskAltIcon from "@mui/icons-material/TaskAlt";
 import AIIcon from "../assets/AIIcon.png";
+import ServiceBannerSection from "../shared/ServiceSection/ServiceBannerSection";
 
 const introDetail = {
   smallTitle: "Accurate. On time. Hassle-free",
@@ -156,7 +157,7 @@ const smartBusinessData = [
 const IncomeTax = () => {
   return (
     <>
-      <BackgroundImageWrapper>
+      <BackgroundImageWrapper forHeroSection={true}>
         <div className="py-12 px-4 sm:px-6 lg:px-12">
           <IntroSection {...introDetail} />
         </div>
@@ -233,6 +234,11 @@ const IncomeTax = () => {
           ))}
         </div>
       </LandingPageTitleSection>
+      <ServiceBannerSection>
+        <div className="flex items-center justify-center w-full h-full">
+          <p className="text-white">Hello Banner</p>
+        </div>
+      </ServiceBannerSection>
     </>
   );
 };

@@ -10,7 +10,7 @@ import BackgroundImageWrapper from "../components/Layout/BackgroundImageWrapper"
 const Home = () => {
   return (
     <>
-      <BackgroundImageWrapper>
+      <BackgroundImageWrapper forHeroSection={true}>
         <TaxSolutions />
       </BackgroundImageWrapper>
       <InnovativeTeams />

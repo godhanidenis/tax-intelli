@@ -2,11 +2,21 @@ import PropTypes from "prop-types";
 import { Box } from "@mui/material";
 import headerBackgroundImage from "../../assets/HeaderBg.png";
 import heroSectionBackgroundImage from "../../assets/Background.png";
+import ServicesBanner from "../../assets/ServicesBanner.png";
 
-const BackgroundImageWrapper = ({ forHeader = false, children }) => {
+const BackgroundImageWrapper = ({
+  forHeader = false,
+  forHeroSection = false,
+  forServiceBanner = false,
+  children,
+}) => {
   const backgroundImage = forHeader
     ? headerBackgroundImage
-    : heroSectionBackgroundImage;
+    : forHeroSection
+    ? heroSectionBackgroundImage
+    : forServiceBanner
+    ? ServicesBanner
+    : "";
 
   return (
     <Box
@@ -22,6 +32,7 @@ const BackgroundImageWrapper = ({ forHeader = false, children }) => {
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         width: "100%",
+        height: "100%",
       }}
     >
       {children}
@@ -31,7 +42,9 @@ const BackgroundImageWrapper = ({ forHeader = false, children }) => {
 
 BackgroundImageWrapper.propTypes = {
   forHeader: PropTypes.bool,
-  children: PropTypes.node,
+  forHeroSection: PropTypes.bool,
+  forServiceBanner: PropTypes.bool,
+  children: PropTypes.node.isRequired,
 };
 
 export default BackgroundImageWrapper;
