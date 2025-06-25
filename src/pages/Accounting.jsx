@@ -1,11 +1,8 @@
 import IntroSection from "../shared/ServiceSection/IntroSection";
 import accountingLeftImage from "../assets/accountingPage/accountingLeftImage.png";
-import investmentImage from "../assets/incomeTexpage/investment.png";
-import itrfilingImage from "../assets/incomeTexpage/itr_filing.png";
 import accountsReceivableImage from "../assets/accountingPage/accountsReceivable.png";
 import bookingImage from "../assets/accountingPage/booking.png";
 import reconciliationImage from "../assets/accountingPage/reconciliation.png";
-import tcstdsImage from "../assets/incomeTexpage/tcs_vs_tds.png";
 import auditImage from "../assets/accountingPage/audit.png";
 import taxImage from "../assets/accountingPage/tax.png";
 import inventoryImage from "../assets/accountingPage/inventory.png";
@@ -21,11 +18,13 @@ import { Box, Typography } from "@mui/material";
 import TaskAltIcon from "@mui/icons-material/TaskAlt";
 import AIIcon from "../assets/AIIcon.png";
 import ServiceBannerSection from "../shared/ServiceSection/ServiceBannerSection";
+import RightIconCommonButton from "../shared/CommonButton/RightIconCommonButton";
 
 const introDetail = {
   smallTitle: "Clear books. Better decisions. Full control",
   bigTitle: "Accounting & Bookkeeping",
-  description: `We help you maintain clean and accurate financial records. Our accounting services are made to suit your business needs. You get full clarity and peace of mind`,
+  description:
+    "We help you maintain clean and accurate financial records. Our accounting services are made to suit your business needs. You get full clarity and peace of mind",
 };
 
 const serviceDetail = {
@@ -38,27 +37,27 @@ const serviceDetail = {
   userTypes: [
     {
       icon: professionalsIcon,
-      alt: "Salaried",
-      title: "Small & Medium Businesses",
+      alt: "Small & Medium",
+      title: "🏪 Small & Medium Businesses",
       description: "Retailers, service providers, and local enterprises",
     },
     {
       icon: buissnessIcon,
-      alt: "Business Owners",
-      title: "Freelancers & Consultants",
+      alt: "Freelancers",
+      title: "💼 Freelancers & Consultants",
       description:
         "Independent professionals across creative and technical fields",
     },
     {
       icon: companiesIcon,
-      alt: "HUFs",
-      title: "Startups & New Companies",
+      alt: "Startups",
+      title: "🚀 Startups & New Companies",
       description: "New-age ventures and scaling businesses",
     },
     {
       icon: investorsIcon,
-      alt: "Service",
-      title: "NGOs & Service Providers",
+      alt: "NGOs",
+      title: "🏥 NGOs & Service Providers",
       description:
         "Non-profits and organizations offering professional services",
     },
@@ -162,7 +161,7 @@ const smartBusinessData = [
 const Accounting = () => {
   return (
     <>
-      <BackgroundImageWrapper>
+      <BackgroundImageWrapper forHeroSection={true}>
         <div className="py-12 px-4 sm:px-6 lg:px-12">
           <IntroSection {...introDetail} />
         </div>
@@ -240,8 +239,14 @@ const Accounting = () => {
         </div>
       </LandingPageTitleSection>
       <ServiceBannerSection>
-        <div className="flex items-center justify-center w-full h-full">
-          <p className="text-white">Hello Banner</p>
+        <div className="flex items-center justify-center flex-col w-full h-full gap-4 sm:gap-8">
+          <Typography className="!font-bold !text-2xl sm:!text-3xl lg:!text-4xl !text-white text-center !mx-20 sm:!mx-24">
+            Keep Your Books Clean. Keep Your Business Strong
+          </Typography>
+          <Typography className="!text-base sm:!text-lg !text-white !text-center !mx-20 sm:!mx-24">
+            Let our team handle your accounts while you grow your business
+          </Typography>
+          <RightIconCommonButton title="Request a Demo" />
         </div>
       </ServiceBannerSection>
     </>
