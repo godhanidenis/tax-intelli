@@ -93,7 +93,7 @@ const smartBusinessData = [
   },
   {
     title: "Affordable plans",
-    subTitle: "Choose a plan that fits your needs ",
+    subTitle: "Choose a plan that fits your needs",
   },
 ];
 
@@ -110,7 +110,7 @@ const GstCompliance = () => {
 
       <LandingPageTitleSection
         buttonText="Quick, Hassle-Free, and Accurate"
-        text="GST Registration "
+        text="GST Registration"
         subText="From getting your GSTIN to managing updates and cancellations, we simplify the entire registration journey so you can stay compliant without stress"
       >
         <Box className="grid grid-cols-1 sm-500:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mt-8">
