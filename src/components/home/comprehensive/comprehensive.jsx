@@ -63,7 +63,7 @@ const Comprehensive = () => {
               {list.map((item, index) => (
                 <div key={index} className="flex items-start gap-x-3">
                   <TaskAltIcon className="text-primary" size={20} />
-                  <p className="text-gray-800 text-base">{item}</p>
+                  <p className="text-base">{item}</p>
                 </div>
               ))}
             </div>
@@ -75,11 +75,11 @@ const Comprehensive = () => {
                 <p className="text-sm">ITRs filed annually</p>
               </div>
               <div className="flex-1 px-3">
-                <p className="text-xl font-bold text-gray-900">95%+</p>
+                <p className="text-xl font-bold text-primary">95%+</p>
                 <p className="text-sm">accuracy in capital gains reporting</p>
               </div>
               <div className="flex-1 border-l pl-3">
-                <p className="text-xl font-bold text-gray-900">90%+</p>
+                <p className="text-xl font-bold text-primary">90%+</p>
                 <p className="text-sm">notice resolution success</p>
               </div>
             </div>

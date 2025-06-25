@@ -9,6 +9,7 @@ import Accounting from "./pages/Accounting";
 import Registrations from "./pages/Registrations";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import LayoutWrapper from "./components/Layout/LayoutWrapper";
+import ScrollToTop from "./components/ScrollToTop ";
 
 const theme = createTheme({
   typography: {
@@ -28,6 +29,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route element={<LayoutWrapper />}>
             <Route path="/" element={<Home />} />

@@ -31,7 +31,7 @@ const OfferCard = ({
         <p className="text-[#516060] mb-6">{description}</p>
         <ul className="space-y-4">
           {list.map((item, index) => (
-            <li key={index} className="flex items-start">
+            <li key={index} className="flex justify-start items-center">
               <TaskAltIcon className="text-primary" fontSize="small" />
               <span className="ml-3 text-[#414D48]">{item}</span>
             </li>
