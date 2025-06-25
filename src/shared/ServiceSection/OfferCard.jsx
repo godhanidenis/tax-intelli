@@ -9,10 +9,12 @@ const OfferCard = ({
   imageSrc,
 }) => {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 w-full">
       <div
         className={`flex justify-center ${
-          isLeftImage ? "order-1 lg:order-1" : "order-1 lg:order-2"
+          isLeftImage
+            ? "order-1 lg:order-1 lg:justify-start"
+            : "order-1 lg:order-2 lg:justify-end"
         }`}
       >
         <img
@@ -23,7 +25,7 @@ const OfferCard = ({
       </div>
 
       <div
-        className={`${
+        className={`lg:mt-6 ${
           isLeftImage ? "order-2 lg:order-2" : "order-2 lg:order-1"
         }`}
       >

@@ -163,23 +163,11 @@ const IncomeTax = () => {
         </div>
       </BackgroundImageWrapper>
 
-      <div className="py-12 px-4 sm:px-6 lg:px-12">
-        <ServiceDetail {...serviceDetail} />
-      </div>
+      <ServiceDetail {...serviceDetail} />
 
       <LandingPageTitleSection
         buttonText="OUR OFFERINGS"
         text="Discover How We Simplify Your Taxes"
-      />
-
-      {offerCardsData.map((card, index) => (
-        <OfferCard key={index} {...card} />
-      ))}
-
-      <LandingPageTitleSection
-        buttonText="OTHER OFFERINGS"
-        text="Other Offerings to Simplify Tax Matters"
-        subText="Additional services designed to support every aspect of your tax journey"
       >
         <Box className="grid grid-cols-1 sm-500:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mt-8">
           {OfferingsData.map(({ image, title, subTitle, list }, index) => (
@@ -206,6 +194,18 @@ const IncomeTax = () => {
                 ))}
               </ul>
             </Box>
+          ))}
+        </Box>
+      </LandingPageTitleSection>
+
+      <LandingPageTitleSection
+        buttonText="OTHER OFFERINGS"
+        text="Other Offerings to Simplify Tax Matters"
+        subText="Additional services designed to support every aspect of your tax journey"
+      >
+        <Box className="flex items-center justify-center flex-col gap-8 mt-8">
+          {offerCardsData.map((card, index) => (
+            <OfferCard key={index} {...card} />
           ))}
         </Box>
       </LandingPageTitleSection>

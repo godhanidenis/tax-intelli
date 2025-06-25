@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 const ServiceDetail = ({ leftImage, mainTitle, userTypes }) => {
   return (
-    <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+    <div className="custom-container px-4 !mb-14 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
       {/* Left Image and Tag  */}
       <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
         <img
