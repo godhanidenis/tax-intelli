@@ -226,7 +226,7 @@ const Registrations = () => {
               maxWidth={696}
               display="flex"
               flexDirection="column"
-              className="!mx-auto !lg:mx-0"
+              className="!mx-auto lg:!mx-0"
               gap={3}
               textAlign="center"
             >
