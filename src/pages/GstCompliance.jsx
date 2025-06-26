@@ -270,17 +270,17 @@ const GstCompliance = () => {
               </Box>
             </Box>
 
-            <Box className="col-span-12 lg-900:col-span-7 bg-[#F8F9FA] rounded-[30px] px-6 sm:px-8 md:px-10 pt-6 sm:pt-8 md:pt-10">
-              <Box className="absolute flex flex-col gap-3 z-50">
-                <Typography className="!font-bold !text-xl lg-900:!text-[28px] !text-primary !mb-1">
-                  Notices & <br /> Representation
+            <Box className="col-span-12 lg-900:col-span-7 bg-[#F8F9FA] rounded-[30px] px-6 sm:px-8 md:px-10 pt-6 sm:pt-8 md:pt-10 relative flex flex-col gap-3">
+              <Box className="sm:absolute flex flex-col gap-3 z-50">
+                <Typography className="!font-bold !text-xl lg-900:!text-[28px] !text-primary !mb-1 !w-1/2">
+                  Notices & Representation
                 </Typography>
-                <Typography className="text-sm sm:text-base !font-medium !mb-2 !max-w-xs">
+                <Typography className="text-sm sm:text-base !font-medium !mb-2 sm:!w-1/2">
                   We handle GST notices, audits, and represent you in appeals
                   and assessments
                 </Typography>
               </Box>
-              <Box className="w-full h-full flex items-center relative">
+              <Box className="w-full h-full flex items-center">
                 <img src={noticesImage} alt="noticesImage" />
               </Box>
             </Box>

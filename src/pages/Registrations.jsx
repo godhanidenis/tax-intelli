@@ -131,36 +131,35 @@ const GovernmentDetail = {
 
 const tabContent = {
   1: {
+    text: "Get your business onboarded with the Government e-Marketplace (GeM) and start selling to government buyers across India with ease.",
     list: [
-      "ITR Filing for individuals, businesses & NRIs",
-      "Capital gains, revised & belated returns",
-      "Tax planning, TDS compliance & advisory",
+      "Guidance on registration and documentation",
+      "Profile creation and product/service listing",
+      "Assistance in bid participation and compliance",
     ],
-    text: "We help you get listed on the Government e-Marketplace (GeM), enabling you to sell products and services directly to government departments.",
   },
   2: {
+    text: "Ensure your business meets environmental and quality standards with Pollution Control Board and ISO certifications.",
     list: [
-      "ITR Filing for individuals, businesses & NRIs",
-      "Capital gains, revised & belated returns",
-      "Tax planning, TDS compliance & advisory",
+      "Assistance in filing for Pollution Control Board clearance",
+      "Support in obtaining ISO certifications (9001, 14001, etc.)",
+      "Expert documentation and audit guidance",
     ],
-    text: "We help you get listed on the Government e-Marketplace (GeM), enabling you to sell products and services directly to government departments.",
   },
   3: {
+    text: "Protect your intellectual property and business identity with our complete IP services.",
     list: [
-      "ITR Filing for individuals, businesses & NRIs",
-      "Capital gains, revised & belated returns",
-      "Tax planning, TDS compliance & advisory",
+      "Trademark, copyright, and patent registration",
+      "Brand protection and legal advisory",
+      "Renewal and compliance support",
     ],
-    text: "We help you get listed on the Government e-Marketplace (GeM), enabling you to sell products and services directly to government departments.",
   },
-
   4: {
-    text: "We help you get listed on the Government e-Marketplace (GeM), enabling you to sell products and services directly to government departments.",
+    text: "Simplify the complex process of property mutation with expert assistance tailored for both individuals and businesses.",
     list: [
-      "ITR Filing for individuals, businesses & NRIs",
-      "Capital gains, revised & belated returns",
-      "Tax planning, TDS compliance & advisory",
+      "Documentation and application filing for mutation",
+      "Coordination with municipal authorities",
+      "End-to-end process tracking until completion",
     ],
   },
 };
