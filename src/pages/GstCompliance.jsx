@@ -223,7 +223,7 @@ const GstCompliance = () => {
         text="Comprehensive GST Support Beyond Filing"
         subText="From input credit to audits and sector-specific advice—we cover everything you need to stay compliant and worry-free."
       >
-        <Box className="flex gap-4 sm:gap-8 flex-col">
+        <Box className="flex gap-4 sm:gap-8 flex-col mt-8">
           <Box className="grid grid-cols-12 gap-4 sm:gap-8">
             <Box className="col-span-12 lg-900:col-span-7 bg-[#F8F9FA] rounded-[30px] px-6 sm:px-8 md:px-10 pt-6 sm:pt-8 md:pt-10 flex flex-col gap-3">
               <Typography className="!font-bold !text-xl lg-900:!text-[28px] !text-primary !mb-1">
