@@ -14,6 +14,7 @@ import { Box, Typography } from "@mui/material";
 import AIIcon from "../assets/AIIcon.png";
 import ServiceBannerSection from "../shared/ServiceSection/ServiceBannerSection";
 import RightIconCommonButton from "../shared/CommonButton/RightIconCommonButton";
+import TaskAltIcon from "@mui/icons-material/TaskAlt";
 
 const introDetail = {
   smallTitle: "Stay compliant. Avoid penalties. File on time",
@@ -78,6 +79,30 @@ const OfferingsData = [
   },
 ];
 
+const GstDetail = {
+  btnText: "Accurate. On Time. Every Time",
+  title: "GST Return Filing",
+  subTitle: `Timely return filing is crucial to avoid penalties and ensure smooth input tax credit claims. We take care of the entire process—monthly, quarterly, and annually—so you never miss a deadline.`,
+  gstTypes: [
+    {
+      title: "GSTR-1",
+      description: "Outward supplies (sales) – filed monthly/quarterly",
+    },
+    {
+      title: "GSTR-3B",
+      description: "Summary return of outward and inward supplies",
+    },
+    {
+      title: "GSTR-4",
+      description: "For composition scheme taxpayers",
+    },
+    {
+      title: "GSTR-9/9C",
+      description: "Annual return & audit certification",
+    },
+  ],
+};
+
 const smartBusinessData = [
   {
     title: "End-to-end service",
@@ -134,6 +159,60 @@ const GstCompliance = () => {
         </Box>
       </LandingPageTitleSection>
 
+      <div className="custom-container px-4 !mb-14 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        {/* Left Text Content  */}
+        <div className="space-y-6">
+          <Box
+            display="flex"
+            flexDirection="column"
+            className="!lg:items-start"
+            gap={2}
+          >
+            <Box className="font-semibold text-sm leading-6 bg-tertiary text-primary px-4 py-2 rounded-full select-none w-fit mx-auto lg:mx-0">
+              {GstDetail.btnText}
+            </Box>
+
+            <Box
+              maxWidth={696}
+              display="flex"
+              flexDirection="column"
+              className="!mx-auto !lg:mx-0"
+              gap={3}
+              textAlign="center"
+            >
+              <Typography className="!text-primary !font-bold !text-4xl sm-500:!text-5xl lg:text-start">
+                {GstDetail.title}
+              </Typography>
+              <Typography className="!text-lg lg:text-start">
+                {GstDetail.subTitle}
+              </Typography>
+            </Box>
+          </Box>
+
+          {/* Features Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left">
+            {GstDetail.gstTypes.map((item, index) => (
+              <div key={index} className="flex items-start gap-3">
+                <TaskAltIcon className="text-primary" size={20} />
+                <div>
+                  <h3 className="font-semibold text-black ">{item.title}</h3>
+                  <p className="text-[#414D48] text-sm">{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Right Image and Tag  */}
+        <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
+          <img
+            src={serviceDetail.leftImage}
+            alt="Professional"
+            className="rounded-lg w-[34rem] md:w-94 h-auto mx-auto lg:mx-0 mix-blend-multiply"
+          />
+        </div>
+      </div>
+
       <LandingPageTitleSection
         buttonText="TRUST CENTER"
         text="Why Smart Businesses Choose Us"
@@ -158,6 +237,7 @@ const GstCompliance = () => {
           ))}
         </div>
       </LandingPageTitleSection>
+
       <ServiceBannerSection>
         <div className="flex items-center justify-center flex-col w-full h-full gap-4 sm:gap-8">
           <Typography className="!font-bold !text-2xl sm:!text-3xl lg:!text-4xl !text-white text-center !mx-20 sm:!mx-24">
