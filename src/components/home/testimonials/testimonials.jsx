@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import LandingPageTitleSection from "../../../shared/landingPageTitleSection/landingPageTitleSection";
 import { Box, Stack, Typography, Avatar, IconButton } from "@mui/material";
 import Carousel from "react-multi-carousel";
@@ -17,27 +17,26 @@ const responsive = {
 
 const TESTIMONIALS = [
   {
-    text: "As a startup founder, I was overwhelmed with compliance tasks—until I found this platform. Their expert support and real-time updates saved me countless hours and gave me peace of mind. Truly a game-changer",
-    name: "Olivia Wattson",
-    title: "CEO",
+    text: "Their tax advisory helped us streamline our filings during a crucial funding round. The turnaround time and clarity were exceptional. It's a good tax advisory.",
+    name: "Arjun Mehta",
+    title: "Founder",
     avatar: CEOIcon,
     logo: FintechIcon,
   },
   {
-    text: "As a startup founder, I was overwhelmed with compliance tasks—until I found this platform. Their expert support and real-time updates saved me countless hours and gave me peace of mind. Truly a game-changer",
-    name: "Olivia Wattson",
-    title: "CEO",
+    text: "As a CFO, compliance accuracy is non-negotiable. This team not only meets expectations but consistently exceeds them. We’ve seen a 40% reduction in notice triggers.",
+    name: "Neha Sharma",
+    title: "CFO",
     avatar: CEOIcon,
     logo: FintechIcon,
   },
   {
-    text: "As a startup founder, I was overwhelmed with compliance tasks—until I found this platform. Their expert support and real-time updates saved me countless hours and gave me peace of mind. Truly a game-changer",
-    name: "Olivia Wattson",
+    text: "From GST filings to bookkeeping, their end-to-end support allowed us to focus on growing our platform without worrying about backend processes.",
+    name: "Rohan Kulkarni",
     title: "CEO",
     avatar: CEOIcon,
     logo: FintechIcon,
   },
-  // Add more if needed
 ];
 
 const Testimonials = () => {

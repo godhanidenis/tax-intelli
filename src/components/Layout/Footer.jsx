@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
   const navigate = useNavigate();
+
   const menuItems = {
     "Privacy Policy": "Privacy Policy",
     "Terms of Service": "Terms of Service",

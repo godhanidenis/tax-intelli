@@ -8,7 +8,6 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
-
 import ReorderIcon from "@mui/icons-material/Reorder";
 import TaxIntelliLogo from "../../assets/TaxIntelliLogo.png";
 import { useState } from "react";
