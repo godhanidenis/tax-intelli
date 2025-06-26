@@ -16,6 +16,10 @@ import ServiceBannerSection from "../shared/ServiceSection/ServiceBannerSection"
 import RightIconCommonButton from "../shared/CommonButton/RightIconCommonButton";
 import TaskAltIcon from "@mui/icons-material/TaskAlt";
 import GSTReturn from "../assets/gstCompliancePage/GSTReturn.png";
+import reconciliationImage from "../assets/gstCompliancePage/reconciliation.png";
+import GSTAdvisoryImage from "../assets/gstCompliancePage/GSTAdvisory.png";
+import industrySupportImage from "../assets/gstCompliancePage/industrySupport.png";
+import noticesImage from "../assets/gstCompliancePage/notices.png";
 
 const introDetail = {
   smallTitle: "Stay compliant. Avoid penalties. File on time",
@@ -214,6 +218,75 @@ const GstCompliance = () => {
         </div>
       </div>
 
+      <LandingPageTitleSection
+        buttonText="GST GUIDANCE"
+        text="Comprehensive GST Support Beyond Filing"
+        subText="From input credit to audits and sector-specific advice—we cover everything you need to stay compliant and worry-free."
+      >
+        <Box className="flex gap-4 sm:gap-8 flex-col">
+          <Box className="grid grid-cols-12 gap-4 sm:gap-8">
+            <Box className="col-span-12 lg-900:col-span-7 bg-[#F8F9FA] rounded-[30px] px-6 sm:px-8 md:px-10 pt-6 sm:pt-8 md:pt-10 flex flex-col gap-3">
+              <Typography className="!font-bold !text-xl lg-900:!text-[28px] !text-primary !mb-1">
+                Reconciliation & Input Tax Credit
+              </Typography>
+              <Typography className="text-sm sm:text-base !font-medium !mb-2">
+                We match GSTR-2B with purchases to maximize input credit and
+                prevent mismatches
+              </Typography>
+              <Box className="w-full h-full sm:px-10 lg:px-20">
+                <img src={reconciliationImage} alt="reconciliationImage" />
+              </Box>
+            </Box>
+
+            <Box className="col-span-12 lg-900:col-span-5 bg-[#F8F9FA] rounded-[30px] px-6 sm:px-8 md:px-10 pt-6 pb-4 sm:pt-8 md:pt-10 flex flex-col gap-3">
+              <Typography className="!font-bold !text-xl lg-900:!text-[28px] !text-primary !mb-1">
+                GST Advisory
+              </Typography>
+              <Typography className="text-sm sm:text-base !font-medium !mb-2">
+                Get clear advice on invoices, HSN codes, tax rates, and credit
+                rules
+              </Typography>
+              <Box className="w-full h-full flex items-center">
+                <img src={GSTAdvisoryImage} alt="GSTAdvisoryImage" />
+              </Box>
+            </Box>
+          </Box>
+
+          <Box className="grid grid-cols-12 gap-4 sm:gap-8">
+            <Box className="col-span-12 lg-900:col-span-5 bg-[#F8F9FA] rounded-[30px] px-6 sm:px-8 md:px-10 pt-6 pb-4 sm:pt-8 md:pt-10 flex flex-col gap-3">
+              <Typography className="!font-bold !text-xl lg-900:!text-[28px] !text-primary !mb-1">
+                Industry-Specific Support
+              </Typography>
+              <Typography className="text-sm sm:text-base !font-medium !mb-2">
+                Tailored GST guidance for sectors like e-commerce, real estate,
+                and healthcare
+              </Typography>
+              <Box className="w-full h-full flex items-center">
+                <img
+                  src={industrySupportImage}
+                  alt="industrySupportImage"
+                  className="rounded-3xl"
+                />
+              </Box>
+            </Box>
+
+            <Box className="col-span-12 lg-900:col-span-7 bg-[#F8F9FA] rounded-[30px] px-6 sm:px-8 md:px-10 pt-6 sm:pt-8 md:pt-10">
+              <Box className="absolute flex flex-col gap-3 z-50">
+                <Typography className="!font-bold !text-xl lg-900:!text-[28px] !text-primary !mb-1">
+                  Notices & <br /> Representation
+                </Typography>
+                <Typography className="text-sm sm:text-base !font-medium !mb-2 !max-w-xs">
+                  We handle GST notices, audits, and represent you in appeals
+                  and assessments
+                </Typography>
+              </Box>
+              <Box className="w-full h-full flex items-center relative">
+                <img src={noticesImage} alt="noticesImage" />
+              </Box>
+            </Box>
+          </Box>
+        </Box>
+      </LandingPageTitleSection>
       <LandingPageTitleSection
         buttonText="TRUST CENTER"
         text="Why Smart Businesses Choose Us"
