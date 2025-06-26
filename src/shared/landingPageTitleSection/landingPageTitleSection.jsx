@@ -16,9 +16,14 @@ const LandingPageTitleSection = ({
       px={2}
       display="flex"
       flexDirection="column"
-      alignItems={sliderUi ? "start" : "center"}
       gap={2}
       mb={needMB ? 7 : 0}
+      sx={{
+        alignItems: {
+          xs: "center",
+          sm: sliderUi ? "flex-start" : "center",
+        },
+      }}
     >
       <Box
         // variant="contained"
@@ -28,7 +33,7 @@ const LandingPageTitleSection = ({
       </Box>
 
       {sliderUi ? (
-        <Box className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <Box className="grid grid-cols-1 md:grid-cols-2 gap-6 text-center sm:text-start">
           <Typography className="!text-primary !font-bold !text-5xl">
             {text}
           </Typography>

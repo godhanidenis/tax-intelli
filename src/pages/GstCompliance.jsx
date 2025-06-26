@@ -15,6 +15,7 @@ import AIIcon from "../assets/AIIcon.png";
 import ServiceBannerSection from "../shared/ServiceSection/ServiceBannerSection";
 import RightIconCommonButton from "../shared/CommonButton/RightIconCommonButton";
 import TaskAltIcon from "@mui/icons-material/TaskAlt";
+import GSTReturn from "../assets/gstCompliancePage/GSTReturn.png";
 
 const introDetail = {
   smallTitle: "Stay compliant. Avoid penalties. File on time",
@@ -159,9 +160,9 @@ const GstCompliance = () => {
         </Box>
       </LandingPageTitleSection>
 
-      <div className="custom-container px-4 !mb-14 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <div className="custom-container px-4 !mb-14 grid grid-cols-12 sm:gap-10">
         {/* Left Text Content  */}
-        <div className="space-y-6">
+        <div className="space-y-6 col-span-12 lg:col-span-6 xl:col-span-8">
           <Box
             display="flex"
             flexDirection="column"
@@ -176,7 +177,7 @@ const GstCompliance = () => {
               maxWidth={696}
               display="flex"
               flexDirection="column"
-              className="!mx-auto !lg:mx-0"
+              className="!mx-auto lg:!mx-0"
               gap={3}
               textAlign="center"
             >
@@ -204,11 +205,11 @@ const GstCompliance = () => {
         </div>
 
         {/* Right Image and Tag  */}
-        <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
+        <div className="flex flex-col items-center lg:items-start text-center lg:text-left col-span-12 lg:col-span-6 xl:col-span-4 mt-10 sm:mt-0">
           <img
-            src={serviceDetail.leftImage}
+            src={GSTReturn}
             alt="Professional"
-            className="rounded-lg w-[34rem] md:w-94 h-auto mx-auto lg:mx-0 mix-blend-multiply"
+            className="rounded-lg w-[400px] lg:w-full md:w-94 h-auto mx-auto lg:mx-0 mix-blend-multiply"
           />
         </div>
       </div>
