@@ -40,25 +40,25 @@ const serviceDetail = {
     {
       icon: professionalsIcon,
       alt: "Startups",
-      title: "🚀 Startups & New Businesses",
+      title: "Startups & New Businesses",
       description: "Helping founders set up and stay compliant from day one",
     },
     {
       icon: buissnessIcon,
       alt: "SMEs",
-      title: "🏢 SMEs & Private Firms",
+      title: "SMEs & Private Firms",
       description: "Tailored solutions for growing and established businesses",
     },
     {
       icon: companiesIcon,
       alt: "Traders",
-      title: "🏭 Traders & Manufacturers",
+      title: "Traders & Manufacturers",
       description: "Support for businesses involved in production and supply",
     },
     {
       icon: investorsIcon,
       alt: "Online Sellers",
-      title: "🛒 Online Sellers & NGOs",
+      title: "Online Sellers & NGOs",
       description:
         "E-commerce, service providers, and non-profit organizations",
     },

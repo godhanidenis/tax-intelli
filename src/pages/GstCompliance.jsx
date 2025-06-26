@@ -38,25 +38,25 @@ const serviceDetail = {
     {
       icon: professionalsIcon,
       alt: "E-commerce",
-      title: "🛒 E-commerce Sellers",
+      title: "E-commerce Sellers",
       description: "Online sellers on platforms like Amazon, Flipkart, etc.",
     },
     {
       icon: buissnessIcon,
       alt: "Freelancers",
-      title: "💼 Freelancers & Consultants",
+      title: "Freelancers & Consultants",
       description: "Independent professionals offering services across domains",
     },
     {
       icon: companiesIcon,
       alt: "Manufacturers",
-      title: "🏭 Manufacturers & Traders",
+      title: "Manufacturers & Traders",
       description: "Product-based businesses handling production and supply",
     },
     {
       icon: investorsIcon,
       alt: "Exporters",
-      title: "🌍 Exporters & Service Providers",
+      title: "Exporters & Service Providers",
       description:
         "Businesses serving global clients or cross-border operations",
     },

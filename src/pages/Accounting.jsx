@@ -38,26 +38,26 @@ const serviceDetail = {
     {
       icon: professionalsIcon,
       alt: "Small & Medium",
-      title: "🏪 Small & Medium Businesses",
+      title: "Small & Medium Businesses",
       description: "Retailers, service providers, and local enterprises",
     },
     {
       icon: buissnessIcon,
       alt: "Freelancers",
-      title: "💼 Freelancers & Consultants",
+      title: "Freelancers & Consultants",
       description:
         "Independent professionals across creative and technical fields",
     },
     {
       icon: companiesIcon,
       alt: "Startups",
-      title: "🚀 Startups & New Companies",
+      title: "Startups & New Companies",
       description: "New-age ventures and scaling businesses",
     },
     {
       icon: investorsIcon,
       alt: "NGOs",
-      title: "🏥 NGOs & Service Providers",
+      title: "NGOs & Service Providers",
       description:
         "Non-profits and organizations offering professional services",
     },
